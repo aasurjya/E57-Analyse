@@ -1,0 +1,17 @@
+# Large data files
+*.e57
+*.e57:Zone.Identifier
+
+# Compiled binaries
+analyze
+
+# Generated output
+extract.json
+e57_info.txt
+
+# IDE files
+.vscode/
+.idea/
+
+# Backup files
+*.local
