@@ -88,8 +88,9 @@ class GaussianModel(nn.Module):
         self._scaling = nn.Parameter(torch.log(scales))
         
         # Rotation (quaternion, initialized to identity)
-        self._rotation = nn.Parameter(torch.zeros((num_points, 4)).cuda())
-        self._rotation[:, 0] = 1.0  # w component = 1 (identity quaternion)
+        rotation_init = torch.zeros((num_points, 4)).cuda()
+        rotation_init[:, 0] = 1.0  # w component = 1 (identity quaternion)
+        self._rotation = nn.Parameter(rotation_init)
         
     @property
     def get_xyz(self):
