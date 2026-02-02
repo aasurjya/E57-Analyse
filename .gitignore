@@ -8,6 +8,10 @@ analyze
 # Generated output
 extract.json
 e57_info.txt
+*.ply
+*.splat
+*.spz
+test_*
 
 # IDE files
 .vscode/
@@ -15,3 +19,8 @@ e57_info.txt
 
 # Backup files
 *.local
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
